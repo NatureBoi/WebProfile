@@ -4,6 +4,7 @@ html(lang="en")
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(href="css/index.css" type="text/css" rel="stylesheet")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand")
         script(src="script.js")
         title My Web Portfolio
   
@@ -12,15 +13,19 @@ html(lang="en")
             header
                 ul
                     li
-                        a(href="#") About
+                        a.link(href="#") About
                     li
-                        a(href="#") Work
+                        a.link(href="#") Work
                     li
-                        a(href="#") Contact
+                        a.link(href="#") Contact
             
             section.intro
                 h1 Welcome to OO  
                 p.
-                    I am a Fullstack Web Developer and UI/UX
+                    I am a #[span Fullstack Web Developer] and UI/UX
                     Javascript specialist based in Boston, MA.
                     I love creating webpages and mobile applications. 
+            
+            footer
+                p.
+                    &copy 2018 #[a(href="#") Seun Olorunwunmi]. All rights reserved.

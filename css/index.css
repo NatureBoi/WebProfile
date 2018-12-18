@@ -17,6 +17,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Quicksand", sans-serif;
 }
 
 article, aside, details, figcaption, figure, footer,
@@ -79,14 +80,14 @@ ul {
 ul li {
   list-style-type: none;
 }
-ul li a {
+ul li a.link {
   text-decoration: none;
   color: white;
   background: blue;
   padding: 20px 20px;
 }
 
-a:hover {
+a.link:hover {
   background: green;
 }
 
@@ -96,6 +97,14 @@ a:hover {
 }
 .intro h1 {
   margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
