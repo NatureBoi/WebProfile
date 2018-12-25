@@ -1,1 +1,25 @@
 // Animation Css
+
+@mixin slideIn
+    animation: slide-In 1.5s ease-in-out both
+    
+@mixin easeOut
+    transition: all 0.3s ease-out
+    
+@mixin pulseBack
+    animation: pulse 2s linear infinite both
+    
+@keyframes slide-In
+    0%
+        transform: translateY(60px)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
+
+@keyframes pulse
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1

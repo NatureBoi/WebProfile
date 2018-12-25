@@ -1,0 +1,20 @@
+{
+  "name": "webprofile",
+  "version": "1.0.0",
+  "description": "Web Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/index.sass ./html/css/index.css",
+    "pug": "pug -w ./pug -o ./html -P"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatureBoi/WebProfile.git"
+  },
+  "author": "Seun O",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NatureBoi/WebProfile/issues"
+  },
+  "homepage": "https://github.com/NatureBoi/WebProfile#readme"
+}

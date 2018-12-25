@@ -1,38 +1,73 @@
-@import 'reset'
 @import 'config'
-@import 'menu'
 @import 'animations'
+@import 'menu'
+@import 'reset'
+
+
+
+
 // Website CSS Starts Here
 *
     box-sizing: border-box
-    transition: all .5s ease-in-out
+    transition: all 0.3s ease-out
     font-size: 62.5%
 
+
 body
-    background-color: $primary-color
+    background-color: $primary
     height: 100%
     margin: 0
     line-height: 1.5
     // background-image: -webkit-linear-gradient(30deg,#013a6b 10%, #004e95 100%)
 h1
     font-size: 6rem
+    
 h2
-    font-size: 3rem
-h3
     font-size: 2rem
-p
+h3
     font-size: 1.6rem
 
+p
+    font-size: 1.2rem
+    
 
+h1,h2,h3
+    margin: 0
+    padding: 0
+    font-weight: 400
+
+/* Index.html css
 main
     padding: 4rem
     height: 100%
     min-height: calc(100vh - 60px)
+    color: set-text-color($primary)
 
     &#home
         overflow: hidden
         h1
-            margin-top: 10vh
+            margin-top: 25vh
+            @include slideIn
+            font-family: 'Racing Sans One', cursive
+            color: set-text-color($primary)
+
+        h2
+            color: $secondary
+            margin-top: -1.6rem
+        h3
+            color: set-text-color($primary)
+            span
+                color: $secondary
+                @include pulseBack
+        p
+            font-size: 1rem
+            color: set-text-color($primary)
+            span
+                color: darken($secondary, 10)
+                
+/* About.html css */
+
+    
 
 
 footer

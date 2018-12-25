@@ -1,3 +1,67 @@
+@keyframes slide-In {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-nav {
+  display: flex;
+  position: fixed;
+  right: 35px;
+  top: 35px;
+}
+.menu-nav :nth-child(1) i {
+  text-align: center;
+}
+.menu-nav :nth-child(1) i:hover {
+  text-align: center;
+  color: aqua;
+}
+.menu-nav :nth-child(1) i:hover::before {
+  content: "About";
+  transition: all 0.3s ease-out;
+}
+.menu-nav :nth-child(2) i:hover {
+  color: aqua;
+}
+.menu-nav :nth-child(2) i:hover::before {
+  content: "Work";
+  transition: all 0.3s ease-out;
+}
+.menu-nav :nth-child(3) i:hover {
+  color: aqua;
+}
+.menu-nav :nth-child(3) i:hover::before {
+  content: "Skills";
+  transition: all 0.3s ease-out;
+}
+.menu-nav :nth-child(4) i:hover {
+  color: aqua;
+}
+.menu-nav :nth-child(4) i:hover::before {
+  content: "Contact";
+  transition: all 0.3s ease-out;
+}
+.menu-nav li.nav-item {
+  padding: 0 1rem;
+}
+.menu-nav li.nav-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,12 +114,12 @@ table {
 
 * {
   box-sizing: border-box;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-out;
   font-size: 62.5%;
 }
 
 body {
-  background-color: #666;
+  background-color: #222;
   height: 100%;
   margin: 0;
   line-height: 1.5;
@@ -66,35 +130,86 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
-}
-
-h3 {
   font-size: 2rem;
 }
 
-p {
+h3 {
   font-size: 1.6rem;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+/* Index.html css */
 main {
   padding: 4rem;
   height: 100%;
   min-height: calc(100vh - 60px);
+  color: #fff;
 }
 main#home {
   overflow: hidden;
 }
 main#home h1 {
-  margin-top: 10vh;
+  margin-top: 25vh;
+  animation: slide-In 1.5s ease-in-out both;
+  font-family: "Racing Sans One", cursive;
+  color: #fff;
+}
+main#home h2 {
+  color: aqua;
+  margin-top: -1.6rem;
+}
+main#home h3 {
+  color: #fff;
+}
+main#home h3 span {
+  color: aqua;
+  animation: pulse 2s linear infinite both;
+}
+main#home p {
+  font-size: 1rem;
+  color: #fff;
+}
+main#home p span {
+  color: #00cccc;
 }
 
+/* About.html css */
 footer {
   padding: 1rem;
   height: 60px;
   text-align: center;
   background: #2b2b2b;
   color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  main#home {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  main#home h1 {
+    margin-top: 30vh;
+  }
+  main#home h2 {
+    font-size: 1.6rem;
+  }
+  main#home h3 {
+    display: none;
+    transition: all 0.3s ease-out;
+  }
+  main#home p {
+    font-size: 0.91rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
