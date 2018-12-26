@@ -8,6 +8,12 @@
     
 @mixin pulseBack
     animation: pulse 2s linear infinite both
+
+@mixin divSlide
+    animation: div-slide 1s ease-out both 1s
+
+@mixin loading
+    animation: blink 1.4s linear infinite both
     
 @keyframes slide-In
     0%
@@ -23,3 +29,19 @@
 
     100%
         opacity: 1
+
+@keyframes div-slide
+    0%
+        width: 0rem
+        opacity: 0
+    100%
+        opacity: 1
+        width: 13rem
+
+@keyframes blink
+    0%
+        opacity: .2
+    20%
+        opacity: 1
+    100%
+        opacity: .2

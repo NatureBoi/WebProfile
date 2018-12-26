@@ -19,22 +19,32 @@ body
     margin: 0
     line-height: 1.5
     // background-image: -webkit-linear-gradient(30deg,#013a6b 10%, #004e95 100%)
-h1
-    font-size: 6rem
-    
-h2
-    font-size: 2rem
-h3
-    font-size: 1.6rem
 
-p
-    font-size: 1.2rem
-    
-
-h1,h2,h3
+h1,h2,h3,p
     margin: 0
     padding: 0
     font-weight: 400
+    color: set-text-color($primary)
+
+    &.lg-heading
+        font-size: 5rem
+        font-family: 'Racing Sans One', cursive
+        @include slideIn
+        
+        .secondary
+            font-family: 'Racing Sans One', cursive
+            color: $secondary
+    &.md-heading
+        font-size: 2rem
+
+    &.sm-heading
+        font-size: 1.6rem
+
+p
+    font-size: 1.2rem
+h2
+    font-size: 1.6rem
+
 
 /* Index.html css
 main
@@ -47,25 +57,38 @@ main
         overflow: hidden
         h1
             margin-top: 25vh
-            @include slideIn
-            font-family: 'Racing Sans One', cursive
-            color: set-text-color($primary)
-
         h2
             color: $secondary
             margin-top: -1.6rem
         h3
-            color: set-text-color($primary)
             span
-                color: $secondary
+                color: $highlight
                 @include pulseBack
         p
             font-size: 1rem
-            color: set-text-color($primary)
             span
-                color: darken($secondary, 10)
-                
-/* About.html css */
+                color: $highlight
+
+        .divider
+            border: 1px solid $highlight
+            display: inline-block
+            margin-top: -1rem
+            margin-bottom: 2rem
+            @include divSlide
+    &#about
+        h3
+            margin: -0.5rem 0 0.5rem 0
+            background: lighten($primary, 4)
+            border-radius: 12px
+            span
+                color: $highlight
+                padding: 0 0.1rem
+                font-size: 2rem
+                @include loading
+
+        @for $x from 1 to 4
+            .sm-heading span:nth-child(#{$x})
+                animation-delay: $x * .2s
 
     
 
