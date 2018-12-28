@@ -52,7 +52,8 @@ main
     height: 100%
     min-height: calc(100vh - 60px)
     color: set-text-color($primary)
-
+    .slash
+        color: $highlight
     &#home
         overflow: hidden
         h1
@@ -66,8 +67,6 @@ main
                 @include pulseBack
         p
             font-size: 1rem
-            span
-                color: $highlight
 
         .divider
             border: 1px solid $highlight
@@ -130,6 +129,55 @@ main
                 display: grid
                 grid-gap: 1.5rem
                 grid-template-columns: repeat(2, 1fr)
+
+    &#projects
+        text-align: center
+        .projects
+            margin: 3rem 0 3rem 0
+            padding: 0
+            display: flex
+            h2
+                color: $highlight
+                padding-bottom: 0.5rem 
+            h3
+                font-size: 1.2rem
+                padding-bottom: .5rem
+            p
+                font-size: 1.2rem
+                padding: 0.7rem 0
+                a
+                    text-decoration: none
+                    color: set-text-color($primary)
+                    background: lighten($primary, 10)
+                    padding: .5rem 3rem
+                    border-radius: .5rem
+                    text-shadow: darken($primary, 40) 1px 2px 1px
+                    &:hover
+                        color: $secondary
+                        border: 1px solid $highlight
+                        box-shadow: darken($primary, 40) 2px 4px 4px
+                        @include easeOut
+        
+            .project-info
+                align-self: center
+                margin-left: 2rem
+            .project-view
+                margin-right: 2rem
+                img
+                    width: 100%
+                    border-radius: .5rem
+                    opacity: .5
+                    &:hover
+                        border: 3px solid $highlight
+                        opacity: 1
+
+
+
+
+
+
+
+
 
 footer
     padding: 1rem

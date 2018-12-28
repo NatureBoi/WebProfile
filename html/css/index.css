@@ -58,7 +58,7 @@
   color: lightblue;
 }
 .menu-nav :nth-child(2) i:hover::before {
-  content: "Work";
+  content: "Projects";
   transition: all 0.3s ease-out;
 }
 .menu-nav :nth-child(3) i:hover {
@@ -183,6 +183,9 @@ main {
   min-height: calc(100vh - 60px);
   color: #fff;
 }
+main .slash {
+  color: lightblue;
+}
 main#home {
   overflow: hidden;
 }
@@ -199,9 +202,6 @@ main#home h3 span {
 }
 main#home p {
   font-size: 1rem;
-}
-main#home p span {
-  color: lightblue;
 }
 main#home .divider {
   border: 1px solid lightblue;
@@ -334,6 +334,56 @@ main#about .flex-container .work-container {
   grid-gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
+main#projects {
+  text-align: center;
+}
+main#projects .projects {
+  margin: 3rem 0 3rem 0;
+  padding: 0;
+  display: flex;
+}
+main#projects .projects h2 {
+  color: lightblue;
+  padding-bottom: 0.5rem;
+}
+main#projects .projects h3 {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+main#projects .projects p {
+  font-size: 1.2rem;
+  padding: 0.7rem 0;
+}
+main#projects .projects p a {
+  text-decoration: none;
+  color: #fff;
+  background: #3c3c3c;
+  padding: 0.5rem 3rem;
+  border-radius: 0.5rem;
+  text-shadow: black 1px 2px 1px;
+}
+main#projects .projects p a:hover {
+  color: aqua;
+  border: 1px solid lightblue;
+  box-shadow: black 2px 4px 4px;
+  transition: all 0.3s ease-out;
+}
+main#projects .projects .project-info {
+  align-self: center;
+  margin-left: 2rem;
+}
+main#projects .projects .project-view {
+  margin-right: 2rem;
+}
+main#projects .projects .project-view img {
+  width: 100%;
+  border-radius: 0.5rem;
+  opacity: 0.5;
+}
+main#projects .projects .project-view img:hover {
+  border: 3px solid lightblue;
+  opacity: 1;
+}
 
 footer {
   padding: 1rem;
@@ -363,6 +413,13 @@ footer a:hover {
   main#about .flex-container .work-container {
     grid-template-columns: 1fr;
     order: 1;
+  }
+  main#projects .projects {
+    text-align: center;
+    flex-direction: column;
+  }
+  main#projects .projects .project-info {
+    margin: 0;
   }
 }
 @media screen and (max-width: 500px) {

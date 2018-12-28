@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="css/index.css" type="text/css" rel="stylesheet")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet")
+        title Projects
+  
+    body
+        header
+            nav.menu
+                ul.menu-nav
+                    li.nav-item
+                        a.nav-link(href="about.html")
+                            i.fas.fa-user-tie
+                    li.nav-item.current
+                        a.nav-link(href="projects.html")
+                            i.fas.fa-bullseye
+                    li.nav-item
+                        a.nav-link(href="skills.html")
+                            i.fas.fa-cog
+                    li.nav-item
+                        a.nav-link(href="contact.html")
+                            i.fas.fa-envelope  
+            
+        main#projects
+            h1.lg-heading My #[span.secondary Work]
+            h3.sm-heading A collection of my recent projects#[span .]#[span .]#[span .]
+            section#project-1.projects
+                div.project-view
+                    img(src="img/projects/project1.jpg", alt="Project Image")
+                div.project-info
+                    h2 Project Name
+                    h3 UI #[span.slash /] WordPress #[span.slash /] Responsive
+                    p. 
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ex?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ex?
+                    p.btn.btn-view
+                        a(href="#!") View
+
+            section#project-2.projects
+                div.project-view
+                    img(src="img/projects/project2.jpg", alt="Project Image")
+                div.project-info
+                    h2 Project Name
+                    h3 UI #[span.slash /] WordPress #[span.slash /] Responsive
+                    p. 
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ex?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ex?
+                    p.btn.btn-view
+                        a(href="#!") View
+
+            section#project-3.projects
+                div.project-view
+                    img(src="img/projects/project4.jpg", alt="Project Image")
+                div.project-info
+                    h2 Project Name
+                    h3 UI #[span.slash /] WordPress #[span.slash /] Responsive
+                    p. 
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ex?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ex?
+                    p.btn.btn-view
+                        a(href="#!") View
+
+        footer
+            |&copy 2018 #[a(href="index.html") Seun Olorunwunmi]. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+            script(src="js/script.js")
