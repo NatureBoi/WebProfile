@@ -1,7 +1,7 @@
 // SASS Config
 $primary: #222
 $secondary: aqua
-$highlight: skyblue
+$highlight: lightblue
 
 // Set Text Color Function
 @function set-text-color($color)
@@ -10,7 +10,11 @@ $highlight: skyblue
     @else
         @return #fff
         
+@mixin mediaMd
+    @media screen and (max-width: 768px)
+        @content
 
 @mixin mediaSm
     @media screen and (max-width: 500px)
         @content
+

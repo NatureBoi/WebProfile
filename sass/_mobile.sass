@@ -1,4 +1,18 @@
 // Responsive Design
+@include mediaMd
+    main
+        &#about
+            .flex-container
+                flex-direction: column
+                text-align: center
+                .about-img
+                    order: 0
+                    margin: 1rem 0
+                    width: 100%
+                .work-container
+                    grid-template-columns: 1fr
+                    order: 1
+
 @include mediaSm
     main
         padding: 1rem
@@ -17,16 +31,9 @@
             h1
                 margin-top: 15vh
                 font-size: 4rem
-            // h3
-            //     margin: -0.5rem 0 0.5rem 0
-            //     background: lighten($primary, 4)
-            //     border-radius: 12px
-            //     span
-            //         color: $highlight
-            //         padding: 0 0.1rem
-            //         font-size: 4rem
-            //         @include loading
+            .flex-container
+                margin: 0
+                padding: 0
+                .about-img
+                    margin: 1rem 0
 
-            // @for $x from 1 to 4
-            //     .sm-heading span:nth-child(#{$x})
-            //         animation-delay: $x * .2s

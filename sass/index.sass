@@ -75,11 +75,11 @@ main
             margin-top: -1rem
             margin-bottom: 2rem
             @include divSlide
-    &#about
+    &#about // About.html CSS Page
         h3
             margin: -0.5rem 0 0.5rem 0
             background: lighten($primary, 4)
-            border-radius: 12px
+            border-radius: 5px
             span
                 color: $highlight
                 padding: 0 0.1rem
@@ -90,8 +90,46 @@ main
             .sm-heading span:nth-child(#{$x})
                 animation-delay: $x * .2s
 
-    
+            .work
+                background: lighten($primary, 10)
+                border-bottom: 3px solid $secondary
+                margin: 1.5rem 0
+                padding: 0 1rem 1rem 1.3rem
+            .about-img
+               text-align: center
+               .socials
+                   a
+                       color: $highlight
+                       i
+                           font-size: 2rem
+                           padding: 1rem
+               img
+                   border-radius: 50%
+                   border: 3px solid $highlight
+            h3
+                color: $highlight
+                font-size: 1.5rem
+            h6
+                color: $secondary
+                font-size: 1rem
 
+        .flex-container
+            margin-top: 2rem
+            display: flex
+            flex-direction: row
+            flex: 1 1 auto
+            justify-content: space-between
+            .about-img
+                width: 50%
+                order: 1
+                margin-left: 1.5rem
+            .work-container
+                width: 100%
+                order: 0
+                margin-right: 1.5rem
+                display: grid
+                grid-gap: 1.5rem
+                grid-template-columns: repeat(2, 1fr)
 
 footer
     padding: 1rem
@@ -99,6 +137,11 @@ footer
     text-align: center
     background: #2b2b2b
     color: #fff
+    a
+        text-decoration: none
+        color: $highlight
+        &:hover
+            color: $secondary
 
 
 
