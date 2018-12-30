@@ -40,9 +40,11 @@
 .menu-nav {
   display: flex;
   position: fixed;
-  right: 35px;
-  top: 35px;
+  justify-content: flex-end;
+  padding: 1rem 1rem;
   z-index: 5;
+  width: 100%;
+  background: #222;
 }
 .menu-nav :nth-child(1) i {
   text-align: center;
@@ -331,8 +333,10 @@ main#projects .projects .project-view img:hover {
   opacity: 1;
 }
 main#skills {
-  margin-top: 10vh;
-  min-height: calc(90vh - 60px);
+  min-height: calc(100vh - 60px);
+}
+main#skills h1 {
+  margin-top: 5vh;
 }
 main#skills .skills {
   margin-top: 1.5rem;
@@ -445,7 +449,7 @@ footer a:hover {
     font-size: 4rem;
   }
   main#skills h1 {
-    margin-top: 5vh;
+    margin-top: 10vh;
   }
 }
 
