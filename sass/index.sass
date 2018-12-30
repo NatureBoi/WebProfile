@@ -54,6 +54,22 @@ main
     color: set-text-color($primary)
     .slash
         color: $highlight
+    .loading
+        color: $highlight
+        padding: 0 0.1rem
+        font-size: 2rem
+        @include loading
+
+    @for $x from 1 to 4
+        .sm-heading span:nth-child(#{$x})
+            animation-delay: $x * .2s
+    h3.splode
+        margin: -0.5rem 0 0.5rem 0
+        background: lighten($primary, 4)
+        border-radius: 5px
+        padding-left: 1rem
+        color: $highlight
+
     &#home
         overflow: hidden
         h1
@@ -75,42 +91,27 @@ main
             margin-bottom: 2rem
             @include divSlide
     &#about // About.html CSS Page
+        .work
+            background: lighten($primary, 10)
+            border-bottom: 3px solid $secondary
+            margin: 1.5rem 0
+            padding: 0 1rem 1rem 1.3rem
+        .about-img
+            text-align: center
+            .socials
+                a
+                    color: $highlight
+                    i
+                        font-size: 2rem
+                        padding: 1rem
+            img
+                border-radius: 50%
+                border: 3px solid $highlight
         h3
-            margin: -0.5rem 0 0.5rem 0
-            background: lighten($primary, 4)
-            border-radius: 5px
-            span
-                color: $highlight
-                padding: 0 0.1rem
-                font-size: 2rem
-                @include loading
-
-        @for $x from 1 to 4
-            .sm-heading span:nth-child(#{$x})
-                animation-delay: $x * .2s
-
-            .work
-                background: lighten($primary, 10)
-                border-bottom: 3px solid $secondary
-                margin: 1.5rem 0
-                padding: 0 1rem 1rem 1.3rem
-            .about-img
-               text-align: center
-               .socials
-                   a
-                       color: $highlight
-                       i
-                           font-size: 2rem
-                           padding: 1rem
-               img
-                   border-radius: 50%
-                   border: 3px solid $highlight
-            h3
-                color: $highlight
-                font-size: 1.5rem
-            h6
-                color: $secondary
-                font-size: 1rem
+            font-size: 1.5rem
+        h6
+            color: $secondary
+            font-size: 1rem
 
         .flex-container
             margin-top: 2rem
@@ -170,8 +171,26 @@ main
                     &:hover
                         border: 3px solid $highlight
                         opacity: 1
-
-
+    &#skills
+        margin-top: 10vh
+        min-height: calc(90vh - 60px)
+        .skills
+            margin-top: 1.5rem
+            display: flex
+            justify-content: space-around
+            .skills-icons
+                width: 50%
+                align-self: center
+                margin-left: 1rem
+                img
+                    padding: 0 .5rem
+                    max-width: 100%
+                    width: 25%
+                    height: 100%
+            .skills-info
+                width: 50%
+                margin-right: 1rem
+ 
 
 
 

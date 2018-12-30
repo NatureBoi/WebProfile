@@ -5,44 +5,48 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(href="css/index.css" type="text/css" rel="stylesheet")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand")
-        title Seun.io
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet")
+        title Skills
   
     body
-        .container
-            header
-                nav.menu
-                    ul.menu-nav
-                        li.nav-item
-                            a.nav-link(href="about.html") About
-                        li.nav-item
-                            a.nav-link(href="work.html") Work
-                        li.nav-item
-                            a.nav-link(href="skills.html") Skills
-                        li.nav-item
-                            a.nav-link(href="contact.html") Contact
+        header
+            nav.menu
+                ul.menu-nav
+                    li.nav-item
+                        a.nav-link(href="about.html")
+                            i.fas.fa-user-tie
+                    li.nav-item
+                        a.nav-link(href="projects.html")
+                            i.fas.fa-bullseye
+                    li.nav-item.current
+                        a.nav-link(href="skills.html")
+                            i.fas.fa-cog
+                    li.nav-item
+                        a.nav-link(href="contact.html")
+                            i.fas.fa-envelope  
             
-            section.intro
-                h1 Seun  
-                p.
-                    #[span Fullstack Web Developer] and UI/UX
-                    Javascript specialist based in Boston, MA.
-                    I love creating webpages and mobile applications. 
-            
-            section.work
-                .work_1
-                    h2 Test 1
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, pariatur.
-                .work_2
-                    h2 Test 2
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maxime?
-                .work_3
-                    h2 Test 3
-                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, expedita.
+        main#skills
+            h1.lg-heading Skills #[span.secondary]
+            h3.sm-heading.splode Here is what I can do #[span.loading .] #[span.loading .] #[span.loading .]
             section.skills
-            section.contact
+                .skills-info
+                    p.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam excepturi eum blanditiis. Fugiat,
+                        delectus ullam pariatur necessitatibus in dolorem rerum voluptates eligendi inventore recusandae laudantium 
+                        voluptatum eaque adipisci quo sunt vel repellat consequuntur. Voluptas ab doloremque nulla eaque eligendi saepe. #[br] #[br]
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reprehenderit vitae, 
+                        fugit modi aliquam at est id similique maiores soluta, suscipit explicabo temporibus voluptatem, #[br] #[br]
+                        necessitatibus voluptate natus. Quasi nihil doloribus consequatur ex excepturi, in quae fuga praesentium? Iste, odio nulla!
+                .skills-icons
+                    img(src="img/icons/html.svg", alt="")
+                    img(src="img/icons/css.svg", alt="")
+                    img(src="img/icons/js.png", alt="")
+                    img(src="img/icons/react.svg", alt="")
 
-            footer
-                |&copy 2018 #[a(href="#") Seun Olorunwunmi]. All rights reserved.
+        footer
+            |&copy 2018 #[a(href="index.html") Seun Olorunwunmi]. All rights reserved.
 
 
 

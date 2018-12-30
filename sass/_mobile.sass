@@ -13,11 +13,25 @@
                     grid-template-columns: 1fr
                     order: 1
         &#projects
+            h1
+                margin-top: 10vh
             .projects
                 text-align: center
                 flex-direction: column
                 .project-info
                     margin: 0
+                .project-view
+                    margin: 0
+        &#skills
+            .skills
+                flex-direction: column
+                .skills-info, .skills-icons
+                    margin: 1rem 0
+                    width: 100%
+                .skills-icons
+                    order: 0
+                .skills-info
+                    order: 1
 
 
 
@@ -46,4 +60,10 @@
                 padding: 0
                 .about-img
                     margin: 1rem 0
-
+        &#projects
+            h1
+                margin-top: 15vh
+                font-size: 4rem
+        &#skills
+            h1
+                margin-top: 5vh
