@@ -5,44 +5,50 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(href="css/index.css" type="text/css" rel="stylesheet")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand")
-        title Seun.io
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet")
+        title Contact Me
   
     body
-        .container
-            header
-                nav.menu
-                    ul.menu-nav
-                        li.nav-item
-                            a.nav-link(href="about.html") About
-                        li.nav-item
-                            a.nav-link(href="work.html") Work
-                        li.nav-item
-                            a.nav-link(href="skills.html") Skills
-                        li.nav-item
-                            a.nav-link(href="contact.html") Contact
+        header
+            nav.menu
+                ul.menu-nav
+                    li.nav-item
+                        a.nav-link(href="about.html")
+                            i.fas.fa-user-tie
+                    li.nav-item
+                        a.nav-link(href="projects.html")
+                            i.fas.fa-bullseye
+                    li.nav-item
+                        a.nav-link(href="skills.html")
+                            i.fas.fa-cog
+                    li.nav-item.current
+                        a.nav-link(href="contact.html")
+                            i.fas.fa-envelope  
             
-            section.intro
-                h1 Seun  
-                p.
-                    #[span Fullstack Web Developer] and UI/UX
-                    Javascript specialist based in Boston, MA.
-                    I love creating webpages and mobile applications. 
-            
-            section.work
-                .work_1
-                    h2 Test 1
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, pariatur.
-                .work_2
-                    h2 Test 2
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maxime?
-                .work_3
-                    h2 Test 3
-                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, expedita.
-            section.skills
+        main#contact
+            h1.lg-heading Contact #[span.secondary Me]
+            h3.sm-heading.bg Here is how you can reach me #[span.loading .] #[span.loading .] #[span.loading .]
             section.contact
+                .form-img
+                    img(src="img/icons/ps.png", alt="")
+                .form-container
+                    form(action="")
+                        label(for="name") Name
+                        input(type="text" id="name" name="full_name")
+                        label(for="") Email
+                        input(type="email" id="email" name="email_address")
+                        label(for="subject") Subject
+                        input(type="text" id="subject" name="subject")
+                        label(for="msg") Message
+                        textarea(name="msg", cols="30", rows="10")
+                        input(type="button", value="Send Message")
 
-            footer
-                |&copy 2018 #[a(href="#") Seun Olorunwunmi]. All rights reserved.
+
+
+        footer
+            |&copy 2018 #[a(href="index.html") Seun Olorunwunmi]. All rights reserved.
 
 
 
