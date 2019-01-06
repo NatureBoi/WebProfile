@@ -9,41 +9,54 @@
     z-index: 5
     width: 100%
     background: $primary
-    
+    li.nav-item
+        padding: 0 1rem
+        i
+            text-decoration: none
+            color: set-text-color($primary)
+
     :nth-child(1)
         i
             text-align: center
             &:hover
                 text-align: center
-                color: $highlight
+                color: $secondary
                 &::before
-                    content: "About"
+                    content: "Home"
                     @include easeOut
     :nth-child(2)
         i
             &:hover
-                color: $highlight
+                color: $secondary
                 &::before
-                    content: "Projects"
+                    content: "About"
                     @include easeOut
     :nth-child(3)
         i
             &:hover
-                color: $highlight
+                color: $secondary
                 &::before
-                    content: "Skills"
+                    content: "Projects"
                     @include easeOut
     :nth-child(4)
         i
             &:hover
-                color: $highlight
+                color: $secondary
+                &::before
+                    content: "Skills"
+                    @include easeOut
+    :nth-child(5)
+        i
+            &:hover
+                color: $secondary
                 &::before
                     content: "Contact"
-                    @include easeOut
-                
-
-    li.nav-item
-        padding: 0 1rem
-        a
-            text-decoration: none
-            color: set-text-color($primary)
+                    @include easeOut   
+li.nav-item.current
+    a
+        @each $pages in (Index, About, Projects, Skills, Contact)
+            &[href="#{$pages}.html"]
+                i
+                    @include pulseBack
+                    &::before
+                        content: "#{$pages}"

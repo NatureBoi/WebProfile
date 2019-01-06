@@ -7,7 +7,7 @@
     transition: all 0.3s ease-out
     
 @mixin pulseBack
-    animation: pulse 2s linear infinite both
+    animation: pulse 3s linear infinite both
 
 @mixin divSlide
     animation: div-slide 1s ease-out both 1s
@@ -25,10 +25,12 @@
 
 @keyframes pulse
     0%
-        opacity: 0
+        color: #fff
 
+    50%
+        color: $highlight
     100%
-        opacity: 1
+        color: #fff
 
 @keyframes div-slide
     0%

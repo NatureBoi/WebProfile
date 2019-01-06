@@ -10,10 +10,13 @@
 }
 @keyframes pulse {
   0% {
-    opacity: 0;
+    color: #fff;
+  }
+  50% {
+    color: lightblue;
   }
   100% {
-    opacity: 1;
+    color: #fff;
   }
 }
 @keyframes div-slide {
@@ -46,44 +49,82 @@
   width: 100%;
   background: #222;
 }
+.menu-nav li.nav-item {
+  padding: 0 1rem;
+}
+.menu-nav li.nav-item i {
+  text-decoration: none;
+  color: #fff;
+}
 .menu-nav :nth-child(1) i {
   text-align: center;
 }
 .menu-nav :nth-child(1) i:hover {
   text-align: center;
-  color: lightblue;
+  color: aqua;
 }
 .menu-nav :nth-child(1) i:hover::before {
-  content: "About";
+  content: "Home";
   transition: all 0.3s ease-out;
 }
 .menu-nav :nth-child(2) i:hover {
-  color: lightblue;
+  color: aqua;
 }
 .menu-nav :nth-child(2) i:hover::before {
-  content: "Projects";
+  content: "About";
   transition: all 0.3s ease-out;
 }
 .menu-nav :nth-child(3) i:hover {
-  color: lightblue;
+  color: aqua;
 }
 .menu-nav :nth-child(3) i:hover::before {
-  content: "Skills";
+  content: "Projects";
   transition: all 0.3s ease-out;
 }
 .menu-nav :nth-child(4) i:hover {
-  color: lightblue;
+  color: aqua;
 }
 .menu-nav :nth-child(4) i:hover::before {
+  content: "Skills";
+  transition: all 0.3s ease-out;
+}
+.menu-nav :nth-child(5) i:hover {
+  color: aqua;
+}
+.menu-nav :nth-child(5) i:hover::before {
   content: "Contact";
   transition: all 0.3s ease-out;
 }
-.menu-nav li.nav-item {
-  padding: 0 1rem;
+
+li.nav-item.current a[href="Index.html"] i {
+  animation: pulse 3s linear infinite both;
 }
-.menu-nav li.nav-item a {
-  text-decoration: none;
-  color: #fff;
+li.nav-item.current a[href="Index.html"] i::before {
+  content: "Index";
+}
+li.nav-item.current a[href="About.html"] i {
+  animation: pulse 3s linear infinite both;
+}
+li.nav-item.current a[href="About.html"] i::before {
+  content: "About";
+}
+li.nav-item.current a[href="Projects.html"] i {
+  animation: pulse 3s linear infinite both;
+}
+li.nav-item.current a[href="Projects.html"] i::before {
+  content: "Projects";
+}
+li.nav-item.current a[href="Skills.html"] i {
+  animation: pulse 3s linear infinite both;
+}
+li.nav-item.current a[href="Skills.html"] i::before {
+  content: "Skills";
+}
+li.nav-item.current a[href="Contact.html"] i {
+  animation: pulse 3s linear infinite both;
+}
+li.nav-item.current a[href="Contact.html"] i::before {
+  content: "Contact";
 }
 
 html, body, div, span, applet, object, iframe,
@@ -180,6 +221,14 @@ h2 {
 }
 
 /* Index.html css */
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 main {
   padding: 4rem;
   height: 100%;
@@ -223,7 +272,7 @@ main#home h2 {
 }
 main#home h3 span {
   color: lightblue;
-  animation: pulse 2s linear infinite both;
+  animation: pulse 3s linear infinite both;
 }
 main#home p {
   font-size: 1rem;
@@ -387,7 +436,7 @@ main#contact .contact form input, main#contact .contact form textarea {
   outline: none;
   border: none;
   background-color: #3c3c3c;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #d4ebf2;
 }
 main#contact .contact form input[type=text]:focus, main#contact .contact form textarea[type=text]:focus {
